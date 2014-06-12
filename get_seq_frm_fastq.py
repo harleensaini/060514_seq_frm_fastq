@@ -1,6 +1,8 @@
 __author__ = 'proline'
 import datetime
 
+# Extract the sequence line from fastq files
+# Getting a timestamp to append to the output filename
 def getTime():
     return datetime.datetime.now()
 
@@ -11,6 +13,8 @@ fastqseq_output = filename_timestamp+"fastq_seq.txt"
 fastq_file = file(raw_input ('Enter fastq file name: '), 'r')
 fastq_sequence = open(fastqseq_output, 'w')
 
+# Extracting the sequence line, which is the second line in a set of four lines in the fastq file.
+# The first line of fastq file always starts with @
 def get_sequence_fastq():
 
     lines = fastq_file.readlines()
