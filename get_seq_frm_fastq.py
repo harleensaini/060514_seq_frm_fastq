@@ -25,5 +25,3 @@ def get_sequence_fastq():
 
 seq = get_sequence_fastq()
 
-#testing
-#testing again
