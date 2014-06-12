@@ -24,3 +24,5 @@ def get_sequence_fastq():
     fastq_sequence.close()
 
 seq = get_sequence_fastq()
+
+#testing
