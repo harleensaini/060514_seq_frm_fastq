@@ -20,12 +20,13 @@ def get_sequence_fastq():
     lines = fastq_file.readlines()
     for index, eachline in enumerate(lines):
         if eachline[0] == '@':
-            sequence = lines[index+1]
-            fastq_sequence.write(sequence)
+            second_line = len(lines[index+1])
+            if second_line == 101:
+                sequence = lines[index+1]
+                fastq_sequence.write(sequence)
     return
 
     fastq_file.close()
     fastq_sequence.close()
 
 seq = get_sequence_fastq()
-
